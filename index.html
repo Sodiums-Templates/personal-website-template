@@ -369,12 +369,14 @@
             overflow: hidden;
             cursor: pointer;
             box-shadow: 0 10px 30px var(--shadow-color);
+            /* --- MODIFIED: Make the card taller --- */
+            height: 450px; /* Increased height to accommodate more text comfortably */
         }
 
         .review-card img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Ensures image covers the area without stretching */
             transition: transform 0.5s ease;
         }
 
@@ -386,12 +388,13 @@
             background: linear-gradient(to top, rgba(42, 40, 52, 0.95), transparent);
             padding: 4rem 1.5rem 1.5rem 1.5rem;
             color: var(--text-color);
-            transform: translateY(65%);
+            /* --- MODIFIED: Adjust initial translateY to show more of the overlay --- */
+            transform: translateY(20%); /* Shows more of the overlay initially */
             transition: transform 0.5s ease;
         }
 
         .review-card:hover .review-overlay {
-            transform: translateY(0);
+            transform: translateY(0); /* Fully visible on hover */
         }
         .review-card:hover img {
             transform: scale(1.1);
@@ -399,14 +402,20 @@
 
         .review-overlay h3 {
             font-size: 1.5rem;
+            /* --- MODIFIED: Adjust margin for tighter text fit --- */
+            margin-bottom: 0.5rem;
         }
         .review-overlay p {
             color: var(--text-secondary);
             opacity: 0;
             transition: opacity 0.3s ease 0.2s;
+            /* --- MODIFIED: Ensure text wraps and doesn't overflow when revealed --- */
+            margin-bottom: 0.5rem; /* Adjust margin for tighter text fit */
+            /* Removed max-height and overflow hidden for initial state to allow full expansion on hover */
         }
         .review-card:hover .review-overlay p {
             opacity: 1;
+            /* Removed line-clamp and max-height restrictions on hover for full text display */
         }
 
         .rating {
@@ -683,6 +692,7 @@
                     <p>An exploration into why life is bloat and who needs it. All we need is th...</p>
                     <a href="/blogs/life-is-bloatware.html" class="read-more">Read Full Article &rarr;</a>
                 </article>
+            </div>
         </section>
 
         <!-- Game Reviews Section -->
