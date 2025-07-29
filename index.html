@@ -3,7 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sodium | Home</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Ivory Hnt - Web Developer, Linux Enthusiast & Game Reviewer | Portfolio</title>
+    <meta name="title" content="Ivory Hnt - Web Developer, Linux Enthusiast & Game Reviewer | Portfolio">
+    <meta name="description" content="Ivory Hnt is a web developer and Linux enthusiast specializing in Rivera OS development, organizing tech events, and creating digital experiences. Explore projects, blog posts, and game reviews.">
+    <meta name="keywords" content="Ivory Hnt, web developer, Linux developer, Rivera OS, arch linux, game reviews, tech events, open source projects, portfolio, web design">
+    <meta name="author" content="Ivory Hnt">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ivoryhnt.dev/">
+    <meta property="og:title" content="Ivory Hnt - Web Developer, Linux Enthusiast & Game Reviewer">
+    <meta property="og:description" content="Explore Ivory Hnt's portfolio featuring Rivera OS development, tech events, web projects, and insightful game reviews. A passionate developer making the internet better.">
+    <meta property="og:image" content="https://ivoryhnt.dev/assets/og-image.jpg">
+    <meta property="og:site_name" content="Ivory Hnt Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ivoryhnt.dev/">
+    <meta property="twitter:title" content="Ivory Hnt - Web Developer & Linux Enthusiast">
+    <meta property="twitter:description" content="Portfolio of Ivory Hnt - Web developer, Rivera OS creator, and passionate game reviewer. Discover innovative projects and tech insights.">
+    <meta property="twitter:image" content="https://ivoryhnt.dev/assets/twitter-image.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#2a2834">
+    <meta name="msapplication-TileColor" content="#2a2834">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ivoryhnt.dev/">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ivory Hnt",
+        "url": "https://ivoryhnt.dev",
+        "sameAs": [
+            "https://discord.gg/bwY5cWafJZ",
+            "https://www.reddit.com/user/Icy-Rooster4152/",
+            "https://codeberg.org/RiveraOS/RiveraOS"
+        ],
+        "jobTitle": "Web Developer & Linux Enthusiast",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Rivera OS"
+        },
+        "description": "Web developer specializing in Linux systems, open source projects, and digital experiences",
+        "knowsAbout": ["Web Development", "Linux", "Rivera OS", "Game Development", "Open Source"],
+        "image": "https://ivoryhnt.dev/assets/profile-image.jpg"
+    }
+    </script>
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,13 +83,13 @@
     <style>
         /* --- Google Fonts & CSS Variables --- */
         :root {
-            --primary-bg: #3E3B4D;
-            --secondary-bg: #2a2834;
+            --primary-bg: #1a1a1a;
+            --secondary-bg: #0f0f0f;
             --text-color: #F0F0F0;
             --text-secondary: #b0aec0;
             --accent-color: #A999E5;
             --highlight-color: #6EE7B7;
-            --shadow-color: rgba(0, 0, 0, 0.25);
+            --shadow-color: rgba(0, 0, 0, 0.4);
             --border-color: rgba(255, 255, 255, 0.1);
         }
 
@@ -96,21 +160,19 @@
 
         /* --- Header & Navigation --- */
         header {
-            /* Combined animated gradient for liquid effect with backdrop-filter for blur */
-            background: linear-gradient(135deg, rgba(62, 59, 77, 0.6) 0%, rgba(42, 40, 52, 0.6) 50%, rgba(62, 59, 77, 0.6) 100%);
-            background-size: 400% 400%; /* Larger background to allow for animation */
-            animation: liquidFlow 20s ease infinite alternate; /* Animation for the liquid effect */
-            backdrop-filter: blur(10px); /* Reintroduced blur effect */
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(15, 15, 15, 0.6) 50%, rgba(26, 26, 26, 0.6) 100%);
+            background-size: 400% 400%;
+            animation: liquidFlow 20s ease infinite alternate;
+            backdrop-filter: blur(10px);
             position: fixed;
             width: 100%;
             z-index: 1000;
             border-bottom: 1px solid var(--border-color);
-            border-bottom-left-radius: 20px; /* Rounded corners */
-            border-bottom-right-radius: 20px; /* Rounded corners */
-            overflow: hidden; /* Ensures content stays within rounded borders */
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            overflow: hidden;
         }
 
-        /* Keyframes for the liquid flow animation */
         @keyframes liquidFlow {
             0% {
                 background-position: 0% 50%;
@@ -263,7 +325,6 @@
             gap: 3rem;
             align-items: center;
         }
-        /* Alternate project card layout */
         .project-card:nth-child(even) {
             grid-template-columns: 1fr 1fr;
         }
@@ -369,14 +430,13 @@
             overflow: hidden;
             cursor: pointer;
             box-shadow: 0 10px 30px var(--shadow-color);
-            /* --- MODIFIED: Make the card taller --- */
-            height: 450px; /* Increased height to accommodate more text comfortably */
+            height: 450px;
         }
 
         .review-card img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures image covers the area without stretching */
+            object-fit: cover;
             transition: transform 0.5s ease;
         }
 
@@ -385,16 +445,15 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(42, 40, 52, 0.95), transparent);
+            background: linear-gradient(to top, rgba(15, 15, 15, 0.95), transparent);
             padding: 4rem 1.5rem 1.5rem 1.5rem;
             color: var(--text-color);
-            /* --- MODIFIED: Adjust initial translateY to show more of the overlay --- */
-            transform: translateY(20%); /* Shows more of the overlay initially */
+            transform: translateY(20%);
             transition: transform 0.5s ease;
         }
 
         .review-card:hover .review-overlay {
-            transform: translateY(0); /* Fully visible on hover */
+            transform: translateY(0);
         }
         .review-card:hover img {
             transform: scale(1.1);
@@ -402,20 +461,16 @@
 
         .review-overlay h3 {
             font-size: 1.5rem;
-            /* --- MODIFIED: Adjust margin for tighter text fit --- */
             margin-bottom: 0.5rem;
         }
         .review-overlay p {
             color: var(--text-secondary);
             opacity: 0;
             transition: opacity 0.3s ease 0.2s;
-            /* --- MODIFIED: Ensure text wraps and doesn't overflow when revealed --- */
-            margin-bottom: 0.5rem; /* Adjust margin for tighter text fit */
-            /* Removed max-height and overflow hidden for initial state to allow full expansion on hover */
+            margin-bottom: 0.5rem;
         }
         .review-card:hover .review-overlay p {
             opacity: 1;
-            /* Removed line-clamp and max-height restrictions on hover for full text display */
         }
 
         .rating {
@@ -465,12 +520,12 @@
             font-size: 1rem;
             font-weight: 500;
             transition: all 0.3s ease;
-            position: relative; /* For tooltip */
+            position: relative;
         }
 
         .social-links a:hover {
             color: var(--text-color);
-            background: #4a475a;
+            background: #2a2a2a;
             transform: translateY(-3px);
         }
 
@@ -566,7 +621,7 @@
 
             .hamburger {
                 display: block;
-                z-index: 1001; /* Above nav links */
+                z-index: 1001;
             }
             .hamburger i {
                 transition: transform 0.3s ease;
@@ -582,15 +637,15 @@
     <!-- Header & Navigation -->
     <header>
         <nav>
-            <a href="#" class="logo">.</a>
+            <a href="#" class="logo" aria-label="Ivory Hnt Home">.</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#connect">Connect</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
@@ -600,9 +655,9 @@
         <!-- Hero Section -->
         <section id="hero">
             <div class="hero-content">
-                <h1 data-aos="fade-down">Hello, I'm Sodium</h1>
-                <p data-aos="fade-up" data-aos-delay="200">I design and build digital experiences, and occasionally review games I like.</p>
-                <a href="#about" class="cta-button" data-aos="fade-up" data-aos-delay="400">Learn More About Me</a>
+                <h1 data-aos="fade-down">Hello, I'm Ivory Hnt</h1>
+                <p data-aos="fade-up" data-aos-delay="200">I design and build digital experiences, create Linux distributions, and occasionally review games I love.</p>
+                <a href="#about" class="cta-button" data-aos="fade-up" data-aos-delay="400" aria-label="Learn more about Ivory Hnt">Learn More About Me</a>
             </div>
         </section>
 
@@ -614,21 +669,20 @@
             </div>
             <div class="about-container" data-aos="fade-up">
                 <div class="about-image">
-                    <img src="https://lookhuman.com/cdn/shop/products/diecut-whi-z1-t-frogs-in-frogs-in-frogs-rainbow.png?v=1709814235" alt="A profile picture of [Your Name]" onerror="this.onerror=null;this.src='https://placehold.co/400x500';">
+                    <img src="https://lookhuman.com/cdn/shop/products/diecut-whi-z1-t-frogs-in-frogs-in-frogs-rainbow.png?v=1709814235" alt="Ivory Hnt - Web Developer and Linux Enthusiast Profile Picture" onerror="this.onerror=null;this.src='https://placehold.co/400x500';">
                 </div>
                 <div class="about-text">
                     <h3>An Arch Linux addict</h3>
                     <p>
-                        Welcome to my personal website. I'm a normal human dedicated
-                        to making the internet a better place. But really. Wether that be
-                        through open source projects, organising non-profit events
-                        for people to enjoy, or just making friends, I always try and
-                        make things intresting.
-
+                        Welcome to my personal website. I'm Ivory Hnt, a passionate web developer dedicated
+                        to making the internet a better place. Whether that's through open source projects, 
+                        organizing non-profit tech events for people to enjoy, or just making meaningful 
+                        connections, I always try to make things interesting and impactful.
                     </p>
                     <p>
-                        This website is a living document of all my work and projects.
-                        I do a lot of things, so I should hopefully remember to update it regularly.
+                        This website serves as a living document of all my work and projects.
+                        I do a lot of things across web development, Linux systems, and gaming,
+                        so I'll hopefully remember to update it regularly with new adventures.
                     </p>
                 </div>
             </div>
@@ -642,38 +696,38 @@
             </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card" data-aos="fade-up">
+                <article class="project-card" data-aos="fade-up">
                     <div class="project-content">
                         <span class="project-category">Operating System</span>
                         <h3>Rivera OS</h3>
-                        <p>An arch-based Linux distro that just works, targeted towards advanced users and developers who want an aesthetically pleasing distro that feels like an extension of themselves, and works 'straight out of the box'.</p>
+                        <p>An arch-based Linux distribution that just works, targeted towards advanced users and developers who want an aesthetically pleasing distro that feels like an extension of themselves, and works 'straight out of the box'.</p>
                         <div class="project-tags">
                             <span>Linux</span>
                             <span>Python</span>
                             <span>Shell Script</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://riveraos.pages.dev/" target="_blank">Website <i class="fas fa-external-link-alt"></i></a>
-                            <a href="https://codeberg.org/RiveraOS/RiveraOS" target="_blank">Source Code <i class="fa-solid fa-code"></i></a>
+                            <a href="https://riveraos.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit Rivera OS Website">Website <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://codeberg.org/RiveraOS/RiveraOS" target="_blank" rel="noopener noreferrer" aria-label="View Rivera OS Source Code">Source Code <i class="fa-solid fa-code"></i></a>
                         </div>
                     </div>
-                </div>
+                </article>
                 <!-- Project 2 -->
-                <div class="project-card" data-aos="fade-up">
+                <article class="project-card" data-aos="fade-up">
                     <div class="project-content">
                         <span class="project-category">Event</span>
                         <h3>Rivera Connect</h3>
-                        <p>A Linux & CS event that has speeches by Linux experts, workshops by popular content creators, and debates between closeted femboys.</p>
+                        <p>A Linux & Computer Science event featuring speeches by Linux experts, workshops by popular content creators, and engaging debates between community members passionate about open source technology.</p>
                         <div class="project-tags">
                             <span>Event</span>
                             <span>Social</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://rivera-conf-website.pages.dev/" target="_blank">Website <i class="fas fa-external-link-alt"></i></a>
-                            <a href="https://discord.gg/e9nFeejkNh" target="_blank">Join Event <i class="fa-solid fa-calendar"></i></a>
+                            <a href="https://rivera-conf-website.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit Rivera Connect Website">Website <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://discord.gg/e9nFeejkNh" target="_blank" rel="noopener noreferrer" aria-label="Join Rivera Connect Event">Join Event <i class="fa-solid fa-calendar"></i></a>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -686,11 +740,11 @@
             <div class="blog-container">
                 <!-- Blog Post 1 -->
                 <article class="blog-post" data-aos="fade-up">
-                    <p class="post-meta">July 16, 2025 | Deep</p>
-                    <p> Don't read if you have mental health issues </p>
+                    <p class="post-meta">July 16, 2025 | Deep Thoughts</p>
+                    <p>Content warning: Philosophical discussion about minimalism and life choices</p>
                     <h3>Life is bloatware</h3>
-                    <p>An exploration into why life is bloat and who needs it. All we need is th...</p>
-                    <a href="/blogs/life-is-bloatware.html" class="read-more">Read Full Article &rarr;</a>
+                    <p>An exploration into why life can feel like bloatware and what we really need. A deep dive into minimalism, technology, and finding what truly matters...</p>
+                    <a href="/blogs/life-is-bloatware.html" class="read-more" aria-label="Read full article about life being bloatware">Read Full Article &rarr;</a>
                 </article>
             </div>
         </section>
@@ -703,35 +757,35 @@
             </div>
             <div class="reviews-grid">
                 <!-- Review 1 -->
-                <div class="review-card" data-aos="zoom-in-up">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2475490/ss_d582f6e384652c1a05fb6e928ab6557b0abba1b3.600x338.jpg?t=1751897003" alt="Game Cover Art" onerror="this.onerror=null;this.src='https://placehold.co/error';">
+                <article class="review-card" data-aos="zoom-in-up">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2475490/ss_d582f6e384652c1a05fb6e928ab6557b0abba1b3.600x338.jpg?t=1751897003" alt="Mouthwashing Game Screenshot" onerror="this.onerror=null;this.src='https://placehold.co/error';">
                     <div class="review-overlay">
                         <h3>Mouthwashing</h3>
                         <div class="rating">10/10</div>
-                        <p>“Mouthwashing is the best game I have played in a long time. If your looking for intense, non-linear and story rich titles, this is your best bet. This does not mean I didn't cry at the end...”</p>
-                        <a href="https://store.steampowered.com/app/2475490/Mouthwashing/?curator_clanid=45674590" class="read-more">View Game</a>
+                        <p>"Mouthwashing is the best game I have played in a long time. If you're looking for intense, non-linear and story rich titles, this is your best bet. This doesn't mean I didn't cry at the end..."</p>
+                        <a href="https://store.steampowered.com/app/2475490/Mouthwashing/?curator_clanid=45674590" class="read-more" target="_blank" rel="noopener noreferrer" aria-label="View Mouthwashing on Steam">View Game</a>
                     </div>
-                </div>
+                </article>
                 <!-- Review 2 -->
-                <div class="review-card" data-aos="zoom-in-up" data-aos-delay="100">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/578650/ss_1467a74c1101f1a2a503a87568ace9a8b1f5a613.1920x1080.jpg?t=1738037605" alt="Game Cover Art" onerror="this.onerror=null;this.src='https://placehold.co/error';">
+                <article class="review-card" data-aos="zoom-in-up" data-aos-delay="100">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/578650/ss_1467a74c1101f1a2a503a87568ace9a8b1f5a613.1920x1080.jpg?t=1738037605" alt="The Outer Worlds Game Screenshot" onerror="this.onerror=null;this.src='https://placehold.co/error';">
                     <div class="review-overlay">
                         <h3>The Outer Worlds</h3>
                         <div class="rating">9/10</div>
-                        <p>"The outer worlds is a story rich, first-person shooter game. I brought the base game, so did not have any enhanced visuals, but still looked great. The only downside is the games length (very small)."</p>
-                        <a href="https://store.steampowered.com/app/578650/The_Outer_Worlds/" class="read-more">View Game</a>
+                        <p>"The Outer Worlds is a story rich, first-person shooter game. I bought the base game, so didn't have any enhanced visuals, but it still looked great. The only downside is the game's length (very short)."</p>
+                        <a href="https://store.steampowered.com/app/578650/The_Outer_Worlds/" class="read-more" target="_blank" rel="noopener noreferrer" aria-label="View The Outer Worlds on Steam">View Game</a>
                     </div>
-                </div>
+                </article>
                 <!-- Review 3 -->
-                <div class="review-card" data-aos="zoom-in-up" data-aos-delay="200">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/225540/ss_f8158239f6386689730677bdc4f40c797d0fbbaf.1920x1080.jpg?t=1728396027" alt="Game Cover Art" onerror="this.onerror=null;this.src='https://placehold.co/error';">
+                <article class="review-card" data-aos="zoom-in-up" data-aos-delay="200">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/225540/ss_f8158239f6386689730677bdc4f40c797d0fbbaf.1920x1080.jpg?t=1728396027" alt="Just Cause 3 Game Screenshot" onerror="this.onerror=null;this.src='https://placehold.co/error';">
                     <div class="review-overlay">
                         <h3>Just Cause 3</h3>
                         <div class="rating">7/10</div>
-                        <p>“Just Cause 3 is an exhilarating game that promises hours of explosively amazing game play. It also has tons of DLC's that add at least 10 hours of game play in total. Legit my childhood.”</p>
-                        <a href="https://store.steampowered.com/app/225540/Just_Cause_3/?curator_clanid=45674590" class="read-more">View Game</a>
+                        <p>"Just Cause 3 is an exhilarating game that promises hours of explosively amazing gameplay. It also has tons of DLCs that add at least 10 hours of gameplay in total. Legitimately my childhood favorite."</p>
+                        <a href="https://store.steampowered.com/app/225540/Just_Cause_3/?curator_clanid=45674590" class="read-more" target="_blank" rel="noopener noreferrer" aria-label="View Just Cause 3 on Steam">View Game</a>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
@@ -744,15 +798,15 @@
                 Find me on my favorite platforms, or copy my Discord tag to get in touch.
             </p>
             <div class="social-links" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://discord.gg/bwY5cWafJZ" target="_blank" aria-label="Discord Server"><i class="fab fa-discord"></i><span>Server</span></a>
-                <a href="https://www.reddit.com/user/Icy-Rooster4152/" target="_blank" aria-label="Reddit"><i class="fab fa-reddit"></i><span>Reddit</span></a>
-                <a href="#" onclick="copyDiscord(event)" aria-label="Copy Discord Username" id="discord-copy-link">
+                <a href="https://discord.gg/bwY5cWafJZ" target="_blank" rel="noopener noreferrer" aria-label="Join Sodium's Discord Server"><i class="fab fa-discord"></i><span>Server</span></a>
+                <a href="https://www.reddit.com/user/Icy-Rooster4152/" target="_blank" rel="noopener noreferrer" aria-label="Follow Sodium on Reddit"><i class="fab fa-reddit"></i><span>Reddit</span></a>
+                <a href="#" onclick="copyDiscord(event)" aria-label="Copy Sodium's Discord Username" id="discord-copy-link">
                     <i class="fa-solid fa-at"></i>
                     <span id="discord-username-text">sodiumicecream</span>
                     <span class="tooltip" id="discord-tooltip">Click to Copy</span>
                 </a>
             </div>
-            <p class="copyright">&copy; 2025 Sodium. Do what you want with this website. CSS and JS are all in the same page.</p>
+            <p class="copyright">&copy; 2025 Ivory Hnt. Do what you want with this website. CSS and JS are all in the same page.</p>
         </div>
     </footer>
 
@@ -765,9 +819,9 @@
 
             // Initialize AOS (Animate on Scroll)
             AOS.init({
-                duration: 800,      // animation duration in ms
-                once: true,         // whether animation should happen only once
-                offset: 100,        // offset (in px) from the original trigger point
+                duration: 800,
+                once: true,
+                offset: 100,
                 easing: 'ease-in-out',
             });
 
@@ -804,7 +858,7 @@
             // Prevent the link from navigating
             event.preventDefault();
 
-            const discordUsername = "[YourDiscord#1234]"; // IMPORTANT: Replace with your actual Discord username
+            const discordUsername = "sodiumicecream"; // Keep original Discord username
 
             // Use document.execCommand('copy') for better compatibility in iframes
             const tempInput = document.createElement('textarea');
