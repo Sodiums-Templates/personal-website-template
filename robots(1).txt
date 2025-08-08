@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://sodium-website.pages.dev/sitemap.xml
