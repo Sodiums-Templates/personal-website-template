@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Photography - Ivory Hnt | Visual Stories & Moments</title>
+    <meta name="title" content="Photography - Ivory Hnt | Visual Stories & Moments">
+    <meta name="description" content="Explore Ivory Hnt's photography collection - capturing moments, stories, and visual experiences through the lens.">
+    <meta name="keywords" content="Ivory Hnt, photography, photos, visual stories, moments, gallery">
+    <meta name="author" content="Ivory Hnt">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Photography - Ivory Hnt">
+    <meta property="og:description" content="Visual stories and moments captured through the lens of Ivory Hnt">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* --- CSS Variables matching original theme --- */
+        :root {
+            --primary-bg: #1a1a1a;
+            --secondary-bg: #0f0f0f;
+            --text-color: #F0F0F0;
+            --text-secondary: #b0aec0;
+            --accent-color: #A999E5;
+            --highlight-color: #6EE7B7;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- General & Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.7;
+            font-weight: 300;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--highlight-color);
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(15, 15, 15, 0.6) 50%, rgba(26, 26, 26, 0.6) 100%);
+            background-size: 400% 400%;
+            animation: liquidFlow 20s ease infinite alternate;
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        @keyframes liquidFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-color);
+            border: 2px solid var(--text-color);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--highlight-color);
+            border-color: var(--highlight-color);
+            transform: rotate(360deg);
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text-color);
+        }
+
+        .back-link i {
+            font-size: 1.2rem;
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            padding: 0 5%;
+        }
+
+        #hero h1 {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            margin-bottom: 1rem;
+        }
+
+        #hero p {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            color: var(--accent-color);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .subtitle {
+            color: var(--highlight-color);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        /* --- Gallery Section --- */
+        #gallery {
+            padding-top: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .refresh-btn {
+            background: var(--highlight-color);
+            color: var(--primary-bg);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .refresh-btn:hover {
+            background: #5ce0b0;
+            transform: translateY(-2px);
+        }
+
+        .refresh-btn:active {
+            transform: translateY(0);
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .photo-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            transition: all 0.4s ease;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(15, 15, 15, 0.9), transparent);
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover .photo-overlay {
+            transform: translateY(0);
+        }
+
+        .photo-title {
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* --- Loading States --- */
+        .loading-skeleton {
+            background: linear-gradient(90deg, var(--secondary-bg) 25%, #2a2a2a 50%, var(--secondary-bg) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: 12px;
+            aspect-ratio: 1;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* --- Modal/Lightbox --- */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox.active .lightbox-content {
+            transform: scale(1);
+        }
+
+        .lightbox img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-close:hover {
+            color: var(--highlight-color);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(26, 26, 26, 0.8);
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(169, 153, 229, 0.8);
+            color: var(--primary-bg);
+        }
+
+        .lightbox-prev {
+            left: -70px;
+        }
+
+        .lightbox-next {
+            right: -70px;
+        }
+
+        .photo-counter {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* --- Error States --- */
+        .error-message {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .error-message i {
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+        }
+
+        .error-message h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .lightbox-nav {
+                display: none;
+            }
+
+            .lightbox-content {
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+
+            .lightbox-close {
+                top: -40px;
+                right: 10px;
+            }
+
+            .photo-counter {
+                bottom: -40px;
+            }
+
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 4rem 8%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .gallery-controls {
+                margin-top: 2rem;
+            }
+
+            .refresh-btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <a href="/" class="logo" aria-label="Ivory Hnt Home">.</a>
+            <a href="/" class="back-link" aria-label="Back to Portfolio">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Portfolio</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1 data-aos="fade-down">Photography</h1>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">Latest Collection</p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <div class="photo-grid" id="photoGrid">
+                <!-- Photos will be loaded here dynamically -->
+            </div>
+
+            <div class="gallery-controls" data-aos="fade-up" data-aos-delay="400">
+                <button class="refresh-btn" onclick="loadRandomPhotos()" aria-label="Load new random photos">
+                    <i class="fas fa-refresh"></i>
+                    <span>Refresh Gallery</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close image viewer">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-nav lightbox-prev" onclick="navigatePhoto(-1)" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img id="lightboxImage" src="" alt="Expanded photo view">
+            <button class="lightbox-nav lightbox-next" onclick="navigatePhoto(1)" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="photo-counter" id="photoCounter">1 / 12</div>
+        </div>
+    </div>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        let currentPhotos = [];
+        let currentPhotoIndex = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+                easing: 'ease-in-out',
+            });
+
+            // Load initial photos
+            loadRandomPhotos();
+
+            // Add keyboard navigation for lightbox
+            document.addEventListener('keydown', handleKeyPress);
+        });
+
+        // Simulated photo database - In real implementation, this would fetch from your photos directory
+        const availablePhotos = [
+            'photo001.png', 'photo002.png', 'photo003.png', 'photo004.png',
+            'photo005.png', 'photo006.png', 'photo007.png', 'photo008.png',
+            'photo009.png', 'photo010.png', 'photo011.png', 'photo012.png',
+            'photo013.png', 'photo014.png', 'photo015.png', 'photo016.png',
+            'photo017.png', 'photo018.png', 'photo019.png', 'photo020.png',
+            'photo021.png', 'photo022.png', 'photo023.png', 'photo024.png',
+            'photo025.png', 'photo026.png', 'photo027.png', 'photo028.png',
+            'photo029.png', 'photo030.png'
+        ];
+
+        function loadRandomPhotos() {
+            const photoGrid = document.getElementById('photoGrid');
+            
+            // Show loading skeletons
+            showLoadingState();
+
+            // Simulate loading delay (remove this in real implementation)
+            setTimeout(() => {
+                // Get 12 random photos
+                const shuffled = [...availablePhotos].sort(() => Math.random() - 0.5);
+                currentPhotos = shuffled.slice(0, 12);
+
+                // Clear grid
+                photoGrid.innerHTML = '';
+
+                // Generate photo grid
+                currentPhotos.forEach((photo, index) => {
+                    const photoItem = createPhotoElement(photo, index);
+                    photoGrid.appendChild(photoItem);
+                });
+
+                // Animate new photos in
+                AOS.refresh();
+            }, 500);
+        }
+
+        function showLoadingState() {
+            const photoGrid = document.getElementById('photoGrid');
+            photoGrid.innerHTML = '';
+
+            // Create 12 loading skeletons
+            for (let i = 0; i < 12; i++) {
+                const skeleton = document.createElement('div');
+                skeleton.className = 'loading-skeleton';
+                skeleton.setAttribute('data-aos', 'fade-up');
+                skeleton.setAttribute('data-aos-delay', (i * 50).toString());
+                photoGrid.appendChild(skeleton);
+            }
+        }
+
+        function createPhotoElement(photoName, index) {
+            const photoItem = document.createElement('div');
+            photoItem.className = 'photo-item';
+            photoItem.setAttribute('data-aos', 'zoom-in-up');
+            photoItem.setAttribute('data-aos-delay', (index * 100).toString());
+            photoItem.onclick = () => openLightbox(index);
+
+            const img = document.createElement('img');
+            img.src = `photos/${photoName}`;
+            img.alt = `Photography by Ivory Hnt - ${photoName}`;
+            img.loading = 'lazy';
+            
+            // Handle image load errors
+            img.onerror = () => {
+                img.src = `https://placehold.co/400x400/2a2834/A999E5?text=Photo+${index + 1}`;
+            };
+
+            const overlay = document.createElement('div');
+            overlay.className = 'photo-overlay';
+            
+            const title = document.createElement('div');
+            title.className = 'photo-title';
+            title.textContent = photoName.replace('.png', '').replace(/([a-z])([A-Z])/g, '$1 $2');
+            
+            overlay.appendChild(title);
+            photoItem.appendChild(img);
+            photoItem.appendChild(overlay);
+
+            return photoItem;
+        }
+
+        function openLightbox(index) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const photoCounter = document.getElementById('photoCounter');
+
+            currentPhotoIndex = index;
+            
+            lightboxImage.src = `photos/${currentPhotos[index]}`;
+            lightboxImage.alt = `Photography by Ivory Hnt - ${currentPhotos[index]}`;
+            photoCounter.textContent = `${index + 1} / ${currentPhotos.length}`;
+
+            // Handle lightbox image error
+            lightboxImage.onerror = () => {
+                lightboxImage.src = `https://placehold.co/800x600/2a2834/A999E5?text=Photo+${index + 1}`;
+            };
+
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event && event.target !== event.currentTarget && !event.target.classList.contains('lightbox-close')) {
+                return;
+            }
+
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigatePhoto(direction) {
+            currentPhotoIndex += direction;
+            
+            if (currentPhotoIndex < 0) {
+                currentPhotoIndex = currentPhotos.length - 1;
+            } else if (currentPhotoIndex >= currentPhotos.length) {
+                currentPhotoIndex = 0;
+            }
+
+            const lightboxImage = document.getElementById('lightboxImage');
+            const photoCounter = document.getElementById('photoCounter');
+
+            lightboxImage.src = `photos/${currentPhotos[currentPhotoIndex]}`;
+            lightboxImage.alt = `Photography by Ivory Hnt - ${currentPhotos[currentPhotoIndex]}`;
+            photoCounter.textContent = `${currentPhotoIndex + 1} / ${currentPhotos.length}`;
+
+            // Handle lightbox image error
+            lightboxImage.onerror = () => {
+                lightboxImage.src = `https://placehold.co/800x600/2a2834/A999E5?text=Photo+${currentPhotoIndex + 1}`;
+            };
+        }
+
+        function handleKeyPress(event) {
+            const lightbox = document.getElementById('lightbox');
+            
+            if (!lightbox.classList.contains('active')) {
+                return;
+            }
+
+            switch (event.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    navigatePhoto(-1);
+                    break;
+                case 'ArrowRight':
+                    navigatePhoto(1);
+                    break;
+            }
+        }
+
+        // Handle refresh button animation
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.refresh-btn')) {
+                const btn = e.target.closest('.refresh-btn');
+                const icon = btn.querySelector('i');
+                icon.style.transform = 'rotate(360deg)';
+                setTimeout(() => {
+                    icon.style.transform = '';
+                }, 600);
+            }
+        });
+    </script>
+</body>
+</html>
