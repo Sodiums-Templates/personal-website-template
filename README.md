@@ -1,0 +1,1 @@
+This is my personal website. Feel free to do what you would like with it. All the CSS is inside the HTML files, and it uses some tailwind and fontawesome icons. Please do not use any of my photos, and make sure to change all the text. You don't have to change the titles, headings, subheadings or footers. 
