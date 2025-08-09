@@ -185,6 +185,46 @@
             font-weight: 500;
         }
 
+        /* --- Scroll Down Button --- */
+        .scroll-down-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--highlight-color);
+            color: var(--primary-bg);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .scroll-down-btn:hover {
+            background: #5ce0b0;
+            color: var(--primary-bg);
+            transform: translateY(-2px);
+        }
+
+        .scroll-down-btn i {
+            font-size: 1.2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-8px);
+            }
+            60% {
+                transform: translateY(-4px);
+            }
+        }
+
         /* --- Gallery Section --- */
         #gallery {
             padding-top: 2rem;
@@ -424,6 +464,85 @@
             color: var(--text-color);
         }
 
+        /* --- Footer (matching main page) --- */
+        footer {
+            text-align: center;
+            padding: 10rem 5% 4rem 5%;
+            background: var(--secondary-bg);
+        }
+
+        .footer-content h2 {
+            font-size: 3rem;
+        }
+        .footer-content p {
+            font-size: 1.1rem;
+            max-width: 50ch;
+            margin: 1rem auto 3rem auto;
+        }
+
+        .social-links {
+            margin-bottom: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            background: var(--primary-bg);
+            color: var(--text-secondary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .social-links a:hover {
+            color: var(--text-color);
+            background: #2a2a2a;
+            transform: translateY(-3px);
+        }
+
+        .social-links a i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Discord Copy Tooltip */
+        .tooltip {
+            visibility: hidden;
+            background-color: var(--highlight-color);
+            color: var(--primary-bg);
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 12px;
+            position: absolute;
+            z-index: 1;
+            bottom: 140%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        #discord-copy-link:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
             .photo-grid {
@@ -498,6 +617,10 @@
             <div class="hero-content">
                 <h1 data-aos="fade-down">Photography</h1>
                 <p class="subtitle" data-aos="fade-up" data-aos-delay="200">Latest Collection</p>
+                <a href="#gallery" class="scroll-down-btn" data-aos="fade-up" data-aos-delay="400" aria-label="Scroll to gallery">
+                    <span>View Gallery</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
             </div>
         </section>
 
@@ -513,12 +636,28 @@
                     <span>Refresh Gallery</span>
                 </button>
             </div>
-            <h4>&copy Ivory Hnt. GNU Public Licence | <a href="https://github.com/Ivory-Hnt/sodium-website">View on Github</a></h4>
         </section>
-        
-        
-        
     </main>
+
+    <!-- Footer (matching main page) -->
+    <footer id="connect">
+        <div class="footer-content">
+            <h2 data-aos="fade-up">Let's Connect</h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                Find me on my favorite platforms, or copy my Discord tag to get in touch.
+            </p>
+            <div class="social-links" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://discord.gg/bwY5cWafJZ" target="_blank" rel="noopener noreferrer" aria-label="Join Sodium's Discord Server"><i class="fab fa-discord"></i><span>Server</span></a>
+                <a href="https://www.reddit.com/user/Icy-Rooster4152/" target="_blank" rel="noopener noreferrer" aria-label="Follow Sodium on Reddit"><i class="fab fa-reddit"></i><span>Reddit</span></a>
+                <a href="#" onclick="copyDiscord(event)" aria-label="Copy Sodium's Discord Username" id="discord-copy-link">
+                    <i class="fas fa-at"></i>
+                    <span id="discord-username-text">sodiumicecream</span>
+                    <span class="tooltip" id="discord-tooltip">Click to Copy</span>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2025 Ivory Hnt. GNU Public Licence | <a href="https://github.com/Ivory-Hnt/sodium-website">View on Github</a></p>
+        </div>
+    </footer>
 
     <!-- Lightbox Modal -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
@@ -540,8 +679,6 @@
     <!-- AOS Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    
-    
     <script>
         let currentPhotos = [];
         let currentPhotoIndex = 0;
@@ -561,6 +698,35 @@
             // Add keyboard navigation for lightbox
             document.addEventListener('keydown', handleKeyPress);
         });
+
+        // Function to copy Discord username to clipboard
+        function copyDiscord(event) {
+            // Prevent the link from navigating
+            event.preventDefault();
+
+            const discordUsername = "sodiumicecream";
+
+            // Use document.execCommand('copy') for better compatibility in iframes
+            const tempInput = document.createElement('textarea');
+            tempInput.value = discordUsername;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const tooltip = document.getElementById('discord-tooltip');
+            const usernameText = document.getElementById('discord-username-text');
+
+            // Provide visual feedback
+            tooltip.textContent = 'Copied!';
+            usernameText.textContent = 'Copied to Clipboard!';
+
+            // Reset tooltip and text after 2.5 seconds
+            setTimeout(() => {
+                tooltip.textContent = 'Click to Copy';
+                usernameText.textContent = discordUsername;
+            }, 2500);
+        }
 
         // Simulated photo database - In real implementation, this would fetch from your photos directory
         const availablePhotos = [
