@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Ivory Hnt | Websites Portfolio</title>
+    <meta name="title" content="Ivory Hnt | Websites Portfolio">
+    <meta name="description" content="Showcase of completed websites and web development projects by Ivory Hnt.">
+    <meta name="keywords" content="Ivory Hnt, web development, websites, portfolio, client work, web design, frontend, backend">
+    <meta name="author" content="Ivory Hnt">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Websites Portfolio - Ivory Hnt">
+    <meta property="og:description" content="Showcase of completed websites and web development projects by Ivory Hnt.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* --- CSS Variables matching original theme --- */
+        :root {
+            --primary-bg: #1a1a1a;
+            --secondary-bg: #0f0f0f;
+            --text-color: #F0F0F0;
+            --text-secondary: #b0aec0;
+            --accent-color: #A999E5;
+            --highlight-color: #6EE7B7;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- General & Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.7;
+            font-weight: 300;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--highlight-color);
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(15, 15, 15, 0.6) 50%, rgba(26, 26, 26, 0.6) 100%);
+            background-size: 400% 400%;
+            animation: liquidFlow 20s ease infinite alternate;
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        @keyframes liquidFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-color);
+            border: 2px solid var(--text-color);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--highlight-color);
+            border-color: var(--highlight-color);
+            transform: rotate(360deg);
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text-color);
+        }
+
+        .back-link i {
+            font-size: 1.2rem;
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            padding: 0 5%;
+        }
+
+        #hero h1 {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            margin-bottom: 1rem;
+        }
+
+        #hero p {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            color: var(--accent-color);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .subtitle {
+            color: var(--highlight-color);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        /* --- Scroll Down Button --- */
+        .scroll-down-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--highlight-color);
+            color: var(--primary-bg);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .scroll-down-btn:hover {
+            background: #5ce0b0;
+            color: var(--primary-bg);
+            transform: translateY(-2px);
+        }
+
+        .scroll-down-btn i {
+            font-size: 1.2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-8px);
+            }
+            60% {
+                transform: translateY(-4px);
+            }
+        }
+
+        /* --- Websites Section --- */
+        #websites {
+            padding-top: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .websites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .website-card {
+            background: var(--secondary-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .website-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .website-preview {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            background: var(--primary-bg);
+        }
+
+        .website-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .website-card:hover .website-preview img {
+            transform: scale(1.05);
+        }
+
+        .website-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--highlight-color);
+            color: var(--primary-bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .website-status.maintenance {
+            background: #ff6b6b;
+        }
+
+        .website-status.development {
+            background: #ffd93d;
+            color: var(--secondary-bg);
+        }
+
+        .website-content {
+            padding: 2rem;
+        }
+
+        .website-category {
+            color: var(--highlight-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .website-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .website-description {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .website-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: var(--primary-bg);
+            color: var(--accent-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .website-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .website-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .website-link.primary {
+            background: var(--highlight-color);
+            color: var(--primary-bg);
+        }
+
+        .website-link.primary:hover {
+            background: #5ce0b0;
+            color: var(--primary-bg);
+            transform: translateY(-2px);
+        }
+
+        .website-link.secondary {
+            background: transparent;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+        }
+
+        .website-link.secondary:hover {
+            background: var(--accent-color);
+            color: var(--primary-bg);
+            transform: translateY(-2px);
+        }
+
+        .website-link i {
+            font-size: 1rem;
+        }
+
+        /* --- Stats Section --- */
+        .stats-section {
+            background: var(--secondary-bg);
+            margin: 6rem 0;
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            padding: 2rem 1rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--highlight-color);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* --- Footer (matching main page) --- */
+        footer {
+            text-align: center;
+            padding: 10rem 5% 4rem 5%;
+            background: var(--secondary-bg);
+        }
+
+        .footer-content h2 {
+            font-size: 3rem;
+        }
+        .footer-content p {
+            font-size: 1.1rem;
+            max-width: 50ch;
+            margin: 1rem auto 3rem auto;
+        }
+
+        .social-links {
+            margin-bottom: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            background: var(--primary-bg);
+            color: var(--text-secondary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .social-links a:hover {
+            color: var(--text-color);
+            background: #2a2a2a;
+            transform: translateY(-3px);
+        }
+
+        .social-links a i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Discord Copy Tooltip */
+        .tooltip {
+            visibility: hidden;
+            background-color: var(--highlight-color);
+            color: var(--primary-bg);
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 12px;
+            position: absolute;
+            z-index: 1;
+            bottom: 140%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        #discord-copy-link:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .websites-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .website-links {
+                flex-direction: column;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 4rem 8%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .websites-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+
+            .website-content {
+                padding: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .stat-item {
+                padding: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <a href="/" class="logo" aria-label="Ivory Hnt Home">.</a>
+            <a href="/" class="back-link" aria-label="Back to Portfolio">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Portfolio</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1 data-aos="fade-down">Website Portfolio</h1>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="200">Completed Projects & Client Work</p>
+                <p data-aos="fade-up" data-aos-delay="300">Showcasing websites I've built for clients and personal projects, featuring modern design and cutting-edge technology.</p>
+                <a href="#websites" class="scroll-down-btn" data-aos="fade-up" data-aos-delay="400" aria-label="View websites portfolio">
+                    <span>View Websites</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Websites Built</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support Available</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Websites Section -->
+        <section id="websites">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Featured Websites</h2>
+                <p>A collection of websites I've designed and developed for various clients and projects</p>
+            </div>
+
+            <div class="websites-grid">
+                <!-- Website 1 -->
+                <article class="website-card" data-aos="fade-up">
+                    <div class="website-preview">
+                        <img src="https://placehold.co/400x250/2a2834/A999E5?text=E-Commerce+Store" alt="E-Commerce Website Preview">
+                        <div class="website-status">Live</div>
+                    </div>
+                    <div class="website-content">
+                        <span class="website-category">E-Commerce</span>
+                        <h3>Modern Online Store</h3>
+                        <p class="website-description">
+                            A fully responsive e-commerce platform featuring a modern design, secure payment integration, and comprehensive admin dashboard for inventory management.
+                        </p>
+                        <div class="website-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="website-links">
+                            <a href="#" class="website-link primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Visit Site</span>
+                            </a>
+                            <a href="#" class="website-link secondary">
+                                <i class="fas fa-code"></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Website 2 -->
+                <article class="website-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="website-preview">
+                        <img src="https://placehold.co/400x250/2a2834/6EE7B7?text=Portfolio+Website" alt="Portfolio Website Preview">
+                        <div class="website-status">Live</div>
+                    </div>
+                    <div class="website-content">
+                        <span class="website-category">Portfolio</span>
+                        <h3>Creative Portfolio</h3>
+                        <p class="website-description">
+                            A stunning portfolio website for a digital artist, featuring smooth animations, image galleries, and an integrated contact system with social media links.
+                        </p>
+                        <div class="website-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">GSAP</span>
+                        </div>
+                        <div class="website-links">
+                            <a href="#" class="website-link primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Visit Site</span>
+                            </a>
+                            <a href="#" class="website-link secondary">
+                                <i class="fas fa-code"></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Website 3 -->
+                <article class="website-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="website-preview">
+                        <img src="https://placehold.co/400x250/2a2834/ff6b6b?text=Business+Website" alt="Business Website Preview">
+                        <div class="website-status development">In Development</div>
+                    </div>
+                    <div class="website-content">
+                        <span class="website-category">Business</span>
+                        <h3>Corporate Website</h3>
+                        <p class="website-description">
+                            Professional corporate website with company information, service pages, team profiles, and integrated booking system for consultations.
+                        </p>
+                        <div class="website-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                        <div class="website-links">
+                            <a href="#" class="website-link primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-eye"></i>
+                                <span>Preview</span>
+                            </a>
+                            <a href="#" class="website-link secondary">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Details</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Website 4 -->
+                <article class="website-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="website-preview">
+                        <img src="https://placehold.co/400x250/2a2834/ffd93d?text=Blog+Platform" alt="Blog Platform Preview">
+                        <div class="website-status">Live</div>
+                    </div>
+                    <div class="website-content">
+                        <span class="website-category">Blog</span>
+                        <h3>Tech Blog Platform</h3>
+                        <p class="website-description">
+                            A custom-built blog platform for tech enthusiasts, featuring markdown support, comment system, search functionality, and user authentication.
+                        </p>
+                        <div class="website-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Prisma</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div class="website-links">
+                            <a href="#" class="website-link primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Visit Site</span>
+                            </a>
+                            <a href="#" class="website-link secondary">
+                                <i class="fas fa-code"></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Website 5 -->
+                <article class="website-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="website-preview">
+                        <img src="https://placehold.co/400x250/2a2834/9b59b6?text=Restaurant+Website" alt="Restaurant Website Preview">
+                        <div class="website-status maintenance">Maintenance</div>
+                    </div>
+                    <div class="website-content">
+                        <span class="website-category">Restaurant</span>
+                        <h3>Fine Dining Experience</h3>
+                        <p class="website-description">
+                            Elegant restaurant website with online reservations, interactive menu, chef's specials, and integration with delivery platforms for seamless ordering.
+                        </p>
+                        <div class="website-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                        <div class="website-links">
+                            <a href="#" class="website-link primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Visit Site</span>
+                            </a>
+                            <a href="#" class="website-link secondary">
+                                <i class="fas fa-tools"></i>
+                                <span>Status</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Website 6 -->
+                <article class="website-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="website-preview">
+                        <img src="https://placehold.co/400x250/2a2834/3498db?text=SaaS+Platform" alt="SaaS Platform Preview">
+                        <div class="website-status">Live</div>
+                    </div>
+                    <div class="website-content">
+                        <span class="website-category">SaaS</span>
+                        <h3>Project Management Tool</h3>
+                        <p class="website-description">
+                            Comprehensive SaaS platform for project management with team collaboration features, real-time updates, file sharing, and detailed analytics dashboard.
+                        </p>
+                        <div class="website-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                        <div class="website-links">
+                            <a href="#" class="website-link primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Visit Site</span>
+                            </a>
+                            <a href="#" class="website-link secondary">
+                                <i class="fas fa-play"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (matching main page) -->
+    <footer id="connect">
+        <div class="footer-content">
+            <h2 data-aos="fade-up">Let's Connect</h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                Find me on my favorite platforms, or copy my Discord tag to get in touch.
+            </p>
+            <div class="social-links" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://discord.gg/bwY5cWafJZ" target="_blank" rel="noopener noreferrer" aria-label="Join Sodium's Discord Server"><i class="fab fa-discord"></i><span>Server</span></a>
+                <a href="https://www.reddit.com/user/Icy-Rooster4152/" target="_blank" rel="noopener noreferrer" aria-label="Follow Sodium on Reddit"><i class="fab fa-reddit"></i><span>Reddit</span></a>
+                <a href="#" onclick="copyDiscord(event)" aria-label="Copy Sodium's Discord Username" id="discord-copy-link">
+                    <i class="fas fa-at"></i>
+                    <span id="discord-username-text">sodiumicecream</span>
+                    <span class="tooltip" id="discord-tooltip">Click to Copy</span>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2025 Ivory Hnt. GNU Public Licence | <a href="https://github.com/Ivory-Hnt/sodium-website">View on Github</a></p>
+        </div>
+    </footer>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+                easing: 'ease-in-out',
+            });
+        });
+
+        // Function to copy Discord username to clipboard
+        function copyDiscord(event) {
+            // Prevent the
