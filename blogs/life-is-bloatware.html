@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sodium | Life is bloatware</title>
+    <title>Ivory Hnt | Life is bloatware</title>
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,23 +13,23 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- AOS Library for Scroll Animations (optional for blog post, but included for consistency) -->
+    <!-- AOS Library for Scroll Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        /* --- Google Fonts & CSS Variables (Copied from Sodium | Home) --- */
+        /* --- CSS Variables matching main page theme --- */
         :root {
-            --primary-bg: #3E3B4D;
-            --secondary-bg: #2a2834;
+            --primary-bg: #1a1a1a;
+            --secondary-bg: #0f0f0f;
             --text-color: #F0F0F0;
             --text-secondary: #b0aec0;
             --accent-color: #A999E5;
             --highlight-color: #6EE7B7;
-            --shadow-color: rgba(0, 0, 0, 0.25);
+            --shadow-color: rgba(0, 0, 0, 0.4);
             --border-color: rgba(255, 255, 255, 0.1);
         }
 
-        /* --- General & Reset (Copied from Sodium | Home) --- */
+        /* --- General & Reset --- */
         * {
             margin: 0;
             padding: 0;
@@ -46,6 +46,7 @@
             color: var(--text-color);
             line-height: 1.7;
             font-weight: 300;
+            overflow-x: hidden;
         }
 
         a {
@@ -71,32 +72,14 @@
         }
 
         section {
-            padding: 12rem 10%;
+            padding: 6rem 5%;
             position: relative;
             overflow: hidden;
         }
 
-        .section-title {
-            margin-bottom: 4rem;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .section-title span {
-            font-size: 1.5rem;
-            color: var(--highlight-color);
-            font-weight: 700;
-        }
-
-        .section-title h2 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        /* --- Header & Navigation (Copied from Sodium | Home) --- */
+        /* --- Header & Navigation (matching photography page) --- */
         header {
-            background: linear-gradient(135deg, rgba(62, 59, 77, 0.6) 0%, rgba(42, 40, 52, 0.6) 50%, rgba(62, 59, 77, 0.6) 100%);
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(15, 15, 15, 0.6) 50%, rgba(26, 26, 26, 0.6) 100%);
             background-size: 400% 400%;
             animation: liquidFlow 20s ease infinite alternate;
             backdrop-filter: blur(10px);
@@ -106,16 +89,11 @@
             border-bottom: 1px solid var(--border-color);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
-            overflow: hidden;
         }
 
         @keyframes liquidFlow {
-            0% {
-                background-position: 0% 50%;
-            }
-            100% {
-                background-position: 100% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
         }
 
         nav {
@@ -139,58 +117,36 @@
             border-radius: 50%;
             transition: all 0.3s ease;
         }
+
         .logo:hover {
             color: var(--highlight-color);
             border-color: var(--highlight-color);
             transform: rotate(360deg);
         }
 
-        .nav-links {
-            list-style: none;
+        .back-link {
             display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 3rem;
-        }
-
-        .nav-links a {
+            align-items: center;
+            gap: 0.5rem;
             font-weight: 500;
             font-size: 1rem;
-            position: relative;
-            padding: 5px 0;
             color: var(--text-secondary);
+            transition: color 0.3s ease;
         }
-        .nav-links a:hover {
+
+        .back-link:hover {
             color: var(--text-color);
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--highlight-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .hamburger {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
+        .back-link i {
+            font-size: 1.2rem;
         }
 
         /* --- Blog Post Specific Styles --- */
         .blog-post-content {
             max-width: 800px;
             margin: 0 auto;
-            padding: 2rem 0;
+            padding: 8rem 2rem 2rem 2rem;
         }
 
         .blog-post-content h1 {
@@ -209,7 +165,7 @@
 
         .blog-post-image {
             width: 100%;
-            height: 400px; /* Fixed height for consistency */
+            height: 400px;
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 2.5rem;
@@ -240,7 +196,7 @@
             margin-bottom: 0.5rem;
         }
 
-        /* --- Footer (Copied from Sodium | Home) --- */
+        /* --- Footer (matching main page) --- */
         footer {
             text-align: center;
             padding: 10rem 5% 4rem 5%;
@@ -276,12 +232,12 @@
             font-size: 1rem;
             font-weight: 500;
             transition: all 0.3s ease;
-            position: relative; /* For tooltip */
+            position: relative;
         }
 
         .social-links a:hover {
             color: var(--text-color);
-            background: #4a475a;
+            background: #2a2a2a;
             transform: translateY(-3px);
         }
 
@@ -319,91 +275,42 @@
             opacity: 1;
         }
 
-        /* --- Responsive Design (Copied from Sodium | Home) --- */
-        @media (max-width: 1200px) {
-            .about-container {
-                gap: 3rem;
-            }
-            .project-card {
-                gap: 2rem;
-            }
-        }
-
-        @media (max-width: 992px) {
-            section {
-                padding: 8rem 8%;
-            }
-            .section-title h2 {
-                font-size: 2.5rem;
-            }
-            .about-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .about-image {
-                max-width: 300px;
-                margin: 0 auto 2rem auto;
-            }
-            .project-card, .project-card:nth-child(even) {
-                grid-template-columns: 1fr;
-            }
-            .project-card:nth-child(even) .project-image {
-                order: 0;
-            }
-        }
-
+        /* --- Responsive Design --- */
         @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                right: 0;
-                height: calc(100vh - 80px);
-                width: 100%;
-                background: var(--primary-bg);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                transform: translateX(100%);
-                transition: transform 0.3s ease-in-out;
+            .blog-post-content {
+                padding: 6rem 1rem 2rem 1rem;
             }
 
-            .nav-links.nav-active {
-                transform: translateX(0%);
+            .blog-post-content h1 {
+                font-size: 2rem;
             }
 
-            .nav-links li {
-                margin: 2rem 0;
+            .blog-post-content h2 {
+                font-size: 1.8rem;
             }
 
-            .hamburger {
-                display: block;
-                z-index: 1001; /* Above nav links */
+            .blog-post-content p {
+                font-size: 1rem;
             }
-            .hamburger i {
-                transition: transform 0.3s ease;
-            }
-            .hamburger.active i {
-                transform: rotate(90deg);
+        }
+
+        @media (max-width: 480px) {
+            .blog-post-content {
+                padding: 5rem 0.5rem 2rem 0.5rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Header & Navigation (matching photography page) -->
     <header>
         <nav>
-            <a href="/" class="logo">Bloat</a> <!-- Link back to home -->
-            <ul class="nav-links">
-                <li><a href="/#about">Bloat</a></li>
-                <li><a href="/#projects">Bloat</a></li>
-                <li><a href="/#blog">Bloat</a></li>
-                <li><a href="/#reviews">Bloat</a></li>
-                <li><a href="/#connect">Bloat</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+            <a href="/" class="logo" aria-label="Ivory Hnt Home">.</a>
+            <a href="/" class="back-link" aria-label="Back to Portfolio">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Portfolio</span>
+            </a>
         </nav>
     </header>
 
@@ -412,9 +319,7 @@
         <section id="blog-post">
             <div class="blog-post-content" data-aos="fade-up">
                 <h1>Life is bloat</h1>
-                <span class="blog-post-meta">July 16, 2025 | Personal | By Sodium</span>
-
-                <!-- This is here so I dont forget this element I made in the future <img src="https://placehold.co/800x400/A999E5/2a2834?text=what+the+fuck" alt="What the fuck class="blog-post-image" onerror="this.onerror=null;this.src='https://placehold.co/smth+whent+wrong+lil+bro';"> -->
+                <span class="blog-post-meta">July 16, 2025 | Personal | By Ivory Hnt</span>
 
                 <p>
                     I have just finished playing this game called Mouthwashing that one of my good friends told me to play. Go read the review rn, but it made me feel something I hadn't before. It was a mix of sadness, confusion, anger, dissapointment, disgust and also anxiety. Lots and lots of intense anxiety. It got to the point where my brain was making up stuff and I nearly ended up deleting my github account because I was getting anxiety about how much I need to ditch Microsoft and install Arch on my primary PC.
@@ -427,11 +332,7 @@
                 <p>
                     I don't know who the fuck needs to hear this, but the system of life is broken. You are raised in an immature environment. At age 4, while being barely concious, you are chucked into education. This immediatly forces you to conform to the system. You MUST write with your right hand. You MUST not talk while working. You MUST share things with other people. Why? Why should we write with our right hand, not socialise with others and collaborate and why should we share things with people that take so much from us?
                 </p>
-                <!-- Just another element I need to keep <ul>
-                    <li>Encourages reusability of UI elements.</li>
-                    <li>Simplifies debugging and testing.</li>
-                    <li>Improves collaboration in large teams.</li>
-                </ul> -->
+
                 <p>
                     After joining school, you "learn". School is not learning. School is not education. School is not humane.
                     Why the fuck would anyone willingly send their child into an atmosphere of 30+ kids into a classroom with an underpayed and overworked teacher. Did you know 28% of students report being bullied? The keyword in this is report. Kids are too afraid to report things because of the negitive connotations of this word. Lets expand this shall we? Report, could mean to get someone in trouble with the law which has been drilled into kids as something bad to do because "snitches get stiches". The law is enforced wrong anyway. Report has connotations of intensity. Report has connotations of wrongdoing. Does anyone ever truly do right in this world?
@@ -445,30 +346,29 @@
         </section>
     </main>
 
-    <!-- Footer (Copied from Sodium | Home) -->
+    <!-- Footer (matching main page) -->
     <footer id="connect">
         <div class="footer-content">
-            <h2 data-aos="fade-up">Let's Connect on bloatware</h2>
+            <h2 data-aos="fade-up">Let's Connect</h2>
             <p data-aos="fade-up" data-aos-delay="100">
-                Find me on my favorite bloatware, or copy my Discord tag to get in touch.
+                Find me on my favorite platforms, or copy my Discord tag to get in touch.
             </p>
             <div class="social-links" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://discord.gg/bwY5cWafJZ" target="_blank" aria-label="Discord Server"><i class="fab fa-discord"></i><span>Server</span></a>
-                <a href="https://www.reddit.com/user/Icy-Rooster4152/" target="_blank" aria-label="Reddit"><i class="fab fa-reddit"></i><span>Reddit</span></a>
-                <a href="#" onclick="copyDiscord(event)" aria-label="Copy Discord Username" id="discord-copy-link">
-                    <i class="fa-solid fa-at"></i>
+                <a href="https://discord.gg/bwY5cWafJZ" target="_blank" rel="noopener noreferrer" aria-label="Join Sodium's Discord Server"><i class="fab fa-discord"></i><span>Server</span></a>
+                <a href="https://www.reddit.com/user/Icy-Rooster4152/" target="_blank" rel="noopener noreferrer" aria-label="Follow Sodium on Reddit"><i class="fab fa-reddit"></i><span>Reddit</span></a>
+                <a href="#" onclick="copyDiscord(event)" aria-label="Copy Sodium's Discord Username" id="discord-copy-link">
+                    <i class="fas fa-at"></i>
                     <span id="discord-username-text">sodiumicecream</span>
                     <span class="tooltip" id="discord-tooltip">Click to Copy</span>
                 </a>
             </div>
-            <p class="copyright">&copy; 2025 Sodium. Do what you want with this website. It's bloat anyway.</p>
+            <p class="copyright">&copy; 2025 Ivory Hnt. GNU Public Licence | <a href="https://github.com/Ivory-Hnt/sodium-website">View on Github</a></p>
         </div>
     </footer>
 
     <!-- AOS Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Local Script File -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize AOS (Animate on Scroll)
@@ -478,38 +378,12 @@
                 offset: 100,
                 easing: 'ease-in-out',
             });
-
-            // Mobile Navigation Toggle
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('nav-active');
-                hamburger.classList.toggle('active');
-
-                const icon = hamburger.querySelector('i');
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            });
-
-            // Close mobile nav when a link is clicked
-            document.querySelectorAll('.nav-links li a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (navLinks.classList.contains('nav-active')) {
-                        navLinks.classList.remove('nav-active');
-                        hamburger.classList.remove('active');
-                        const icon = hamburger.querySelector('i');
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
-                });
-            });
         });
 
         // Function to copy Discord username to clipboard
         function copyDiscord(event) {
             event.preventDefault();
-            const discordUsername = "[YourDiscord#1234]";
+            const discordUsername = "sodiumicecream";
 
             const tempInput = document.createElement('textarea');
             tempInput.value = discordUsername;
