@@ -42,6 +42,9 @@
             --shadow-color: rgba(0, 0, 0, 0.4);
             --border-color: rgba(255, 255, 255, 0.1);
         }
+    </script>
+</body>
+</html>
 
         /* --- General & Reset --- */
         * {
@@ -835,4 +838,29 @@
 
         // Function to copy Discord username to clipboard
         function copyDiscord(event) {
-            // Prevent the
+            // Prevent the link from navigating
+            event.preventDefault();
+
+            const discordUsername = "sodiumicecream";
+
+            // Use document.execCommand('copy') for better compatibility in iframes
+            const tempInput = document.createElement('textarea');
+            tempInput.value = discordUsername;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const tooltip = document.getElementById('discord-tooltip');
+            const usernameText = document.getElementById('discord-username-text');
+
+            // Provide visual feedback
+            tooltip.textContent = 'Copied!';
+            usernameText.textContent = 'Copied to Clipboard!';
+
+            // Reset tooltip and text after 2.5 seconds
+            setTimeout(() => {
+                tooltip.textContent = 'Click to Copy';
+                usernameText.textContent = discordUsername;
+            }, 2500);
+        }
