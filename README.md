@@ -1,6 +1,6 @@
 # Personal Website Template
 
-All css and javascript is self contained. Please remember to give credit to me.
+All html, css and javascript is self contained within each page. Please remember to give credit to me.
 
 ## How to download?
 
