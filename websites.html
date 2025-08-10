@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary SEO Meta Tags -->
-    <title>Ivory Hnt | Completed Websites</title>
-    <meta name="title" content="Ivory Hnt | Completed Websites">
+    <title>Your Name | Completed Websites</title>
+    <meta name="title" content="Your Name | Completed Websites">
     <meta name="description" content="A showcase of websites previously designed and developed by me.">
-    <meta name="keywords" content="Ivory Hnt, web developer, portfolio, web design, completed projects, front-end developer">
-    <meta name="author" content="Ivory Hnt">
+    <meta name="keywords" content="your name, web developer, portfolio, web design, completed projects, front-end developer">
+    <meta name="author" content="Your Name">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ivoryhnt.dev/websites">
-    <meta property="og:title" content="Completed Websites - Ivory Hnt">
-    <meta property="og:description" content="A showcase of websites previously designed and developed by me..">
+    <meta property="og:url" content="https://yourwebsite.com/websites">
+    <meta property="og:title" content="Completed Websites - Your Name">
+    <meta property="og:description" content="A showcase of websites previously designed and developed by me.">
     
-    <!-- Favicon -->
+    <!-- Favicon - Replace with your own favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- Google Fonts: Inter -->
@@ -32,7 +32,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        /* --- CSS Variables matching original theme --- */
+        /* --- CSS Variables - customize colors here --- */
         :root {
             --primary-bg: #1a1a1a;
             --secondary-bg: #0f0f0f;
@@ -92,7 +92,7 @@
             overflow: hidden;
         }
 
-        /* --- Header & Navigation (from photography page) --- */
+        /* --- Header & Navigation --- */
         header {
             background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(15, 15, 15, 0.6) 50%, rgba(26, 26, 26, 0.6) 100%);
             background-size: 400% 400%;
@@ -119,6 +119,7 @@
             height: 80px;
         }
 
+        /* Logo - replace with your initials or logo */
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
@@ -161,7 +162,7 @@
         .page-title {
             text-align: center;
             padding-top: 80px; /* Offset for fixed header */
-            margin-bottom: 4rem; /* Added space between title and grid */
+            margin-bottom: 4rem;
         }
 
         .page-title h1 {
@@ -188,7 +189,7 @@
             background: var(--secondary-bg);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px var(--shadow-color); /* Reduced shadow intensity */
+            box-shadow: 0 5px 15px var(--shadow-color);
             transition: all 0.4s ease;
             border: 1px solid var(--border-color);
             display: flex;
@@ -197,13 +198,18 @@
 
         .website-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Reduced hover shadow intensity */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
             border-color: var(--highlight-color);
         }
 
+        /* Image container - 16:9 aspect ratio */
         .website-image {
             aspect-ratio: 16 / 9;
             overflow: hidden;
+            background-color: var(--primary-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .website-image img {
@@ -215,6 +221,19 @@
 
         .website-card:hover .website-image img {
             transform: scale(1.05);
+        }
+
+        /* Placeholder for when no image is provided */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary-bg), var(--secondary-bg));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            font-weight: 500;
         }
 
         .website-content {
@@ -254,7 +273,7 @@
         .website-links {
             display: flex;
             gap: 1.5rem;
-            margin-top: auto; /* Pushes links to the bottom */
+            margin-top: auto;
         }
 
         .website-links a {
@@ -288,7 +307,7 @@
              color: var(--text-color);
         }
 
-        /* --- Footer (from main page) --- */
+        /* --- Footer --- */
         footer {
             text-align: center;
             padding: 10rem 5% 4rem 5%;
@@ -344,7 +363,7 @@
             font-size: 0.9rem;
         }
 
-        /* Discord Copy Tooltip */
+        /* Copy username tooltip */
         .tooltip {
             visibility: hidden;
             background-color: var(--highlight-color);
@@ -363,7 +382,7 @@
             white-space: nowrap;
         }
 
-        #discord-copy-link:hover .tooltip {
+        #username-copy-link:hover .tooltip {
             visibility: visible;
             opacity: 1;
         }
@@ -384,7 +403,8 @@
     <!-- Header & Navigation -->
     <header>
         <nav>
-            <a href="/" class="logo" aria-label="Ivory Hnt Home">.</a>
+            <!-- Replace the dot with your initials or logo -->
+            <a href="/" class="logo" aria-label="Your Name Home">YN</a>
             <a href="/" class="back-link" aria-label="Back to Portfolio">
                 <i class="fas fa-arrow-left"></i>
                 <span>Back to Portfolio</span>
@@ -396,76 +416,91 @@
         <!-- Websites Section -->
         <section id="websites">
             <div class="page-title" data-aos="fade-down">
-                <h1>Completed Websites</h1>
-                <p>A collection of websites I've previously built. Each project has given me the opportunity to learn many things such as SEO, Javascript and some other things.</p>
+                <h1>My Projects</h1>
+                <!-- Replace this with your own description -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             
             <div class="websites-grid">
 
-                <!-- Website Card 1-->
+                <!-- Website Card 1 - Replace content with your project -->
                 <article class="website-card" data-aos="fade-up">
                     <div class="website-image">
-                        <img src="/assets/rivera-conf.webp" alt="Screenshot of Rivera Conf's Website" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                        <!-- Replace src with your project image path -->
+                        <!-- Image should be 600x400 pixels or 16:9 aspect ratio -->
+                        <div class="image-placeholder">600 × 400</div>
+                        <!-- Uncomment below and add your image:
+                        <img src="/path/to/your/image.jpg" alt="Description of your project"> -->
                     </div>
                     <div class="website-content">
-                        <h3>Rivera Conf 2025</h3>
-                        <p>A very responsive and modern website, made for an online Linux and CS confrance and convention.</p>
+                        <h3>Project Name One</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                         <div class="website-tags">
+                            <!-- Add your tech stack tags here -->
                             <span>HTML5</span>
                             <span>CSS3</span>
                             <span>JavaScript</span>
-                            <span>Tailwind</span>
+                            <span>React</span>
                         </div>
                         <div class="website-links">
-                            <a href="https://rivera-conf-website.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit live site for Rivera Conf 2025">Live Site <i class="fas fa-external-link-alt"></i></a>
-                            <a href="https://github.com/Rivera-Linux/rivera-conf-website" target="_blank" rel="noopener noreferrer" aria-label="View source code for Rivera Conf 2025">Source Code <i class="fa-solid fa-code"></i></a>
+                            <!-- Replace with your project links -->
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit live site">Live Site <i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View source code">Source Code <i class="fa-solid fa-code"></i></a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Website Card 2-->
+                <!-- Website Card 2 -->
                 <article class="website-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="website-image">
-                        <img src="/assets/riveraos.webp" alt="Screenshot of Rivera OS's Website" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                        <div class="image-placeholder">600 × 400</div>
+                        <!-- Add your second project image here -->
                     </div>
                     <div class="website-content">
-                        <h3>Rivera OS</h3>
-                        <p>A single page website for an Arch Linux based operating system.</p>
+                        <h3>Project Name Two</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <div class="website-tags">
                             <span>HTML</span>
                             <span>CSS3</span>
-                            <span>SEO</span>
-                            <span>Tailwind</span>
+                            <span>Vue.js</span>
+                            <span>Node.js</span>
                         </div>
                         <div class="website-links">
-                            <a href="https://riveraos.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit live site for Rivera OS">Live Site <i class="fas fa-external-link-alt"></i></a>
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" aria-label="View source code for E-commerce Platform">Source Code <i class="fa-solid fa-code"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit live site">Live Site <i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View source code">Source Code <i class="fa-solid fa-code"></i></a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Website Card 3-->
+                <!-- Website Card 3 -->
                 <article class="website-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="website-image">
-                        <img src="/assets/skylar-muscat.webp" alt="Screenshot of Skylar Muscat's Website" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+                        <div class="image-placeholder">600 × 400</div>
+                        <!-- Add your third project image here -->
                     </div>
                     <div class="website-content">
-                        <h3>Skylar Muscat</h3>
-                        <p>A personal website built for Skylar Muscat to showcase their music.</p>
+                        <h3>Project Name Three</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                         <div class="website-tags">
                             <span>HTML</span>
                             <span>Tailwind CSS</span>
                             <span>Javascript</span>
-                            <span>SEO</span>
+                            <span>API</span>
                         </div>
                         <div class="website-links">
-                            <a href="https://skylar-muscat.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit live site for Personal Blog">Live Site <i class="fas fa-external-link-alt"></i></a>
-                            <a href="https://github.com/Ivory-Hnt/skylar-muscat-website" target="_blank" rel="noopener noreferrer" aria-label="View source code for Personal Blog">Source Code <i class="fa-solid fa-code"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit live site">Live Site <i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View source code">Source Code <i class="fa-solid fa-code"></i></a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Add more <article class="website-card"> elements here for other projects -->
+                <!-- Add more website cards by copying the above structure -->
+                <!-- Each card should have:
+                     - .website-image with either placeholder or actual image
+                     - .website-content with project info
+                     - .website-tags with tech stack
+                     - .website-links with live site and source code links
+                -->
 
             </div>
         </section>
@@ -476,25 +511,26 @@
         <div class="footer-content">
             <h2 data-aos="fade-up">Let's Connect</h2>
             <p data-aos="fade-up" data-aos-delay="100">
-                Find me on my favorite platforms, or copy my Discord tag to DM me.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Find me on social media or send me a message.
             </p>
             <div class="social-links" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://discord.gg/bwY5cWafJZ" target="_blank" rel="noopener noreferrer" aria-label="Join Sodium's Discord Server"><i class="fab fa-discord"></i><span>Server</span></a>
-                <a href="https://www.reddit.com/user/Icy-Rooster4152/" target="_blank" rel="noopener noreferrer" aria-label="Follow Sodium on Reddit"><i class="fab fa-reddit"></i><span>Reddit</span></a>
-                <a href="#" onclick="copyDiscord(event)" aria-label="Copy Sodium's Discord Username" id="discord-copy-link">
+                <!-- Replace with your social media links -->
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub"><i class="fab fa-github"></i><span>GitHub</span></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                <a href="#" onclick="copyUsername(event)" aria-label="Copy Username" id="username-copy-link">
                     <i class="fa-solid fa-at"></i>
-                    <span id="discord-username-text">sodiumicecream</span>
-                    <span class="tooltip" id="discord-tooltip">Click to Copy</span>
+                    <span id="username-text">your_username</span>
+                    <span class="tooltip" id="copy-tooltip">Click to Copy</span>
                 </a>
             </div>
-            <p class="copyright">&copy; 2025 Ivory Hnt. GNU Public Licence | <a href="https://github.com/Ivory-Hnt/sodium-website">View on Github</a></p>
+            <!-- Update copyright with your info -->
+            <p class="copyright">&copy; 2025 Your Name. All rights reserved | <a href="#">View on Github</a></p>
         </div>
     </footer>
 
     <!-- AOS Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Local Script File -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize AOS (Animate on Scroll)
@@ -506,34 +542,60 @@
             });
         });
 
-        // Function to copy Discord username to clipboard
-        function copyDiscord(event) {
-            // Prevent the link from navigating
+        // Function to copy username to clipboard
+        function copyUsername(event) {
             event.preventDefault();
 
-            const discordUsername = "sodiumicecream";
+            // Replace with your actual username
+            const username = "your_username";
 
-            // Use document.execCommand('copy') for better compatibility in iframes
             const tempInput = document.createElement('textarea');
-            tempInput.value = discordUsername;
+            tempInput.value = username;
             document.body.appendChild(tempInput);
             tempInput.select();
             document.execCommand('copy');
             document.body.removeChild(tempInput);
 
-            const tooltip = document.getElementById('discord-tooltip');
-            const usernameText = document.getElementById('discord-username-text');
+            const tooltip = document.getElementById('copy-tooltip');
+            const usernameText = document.getElementById('username-text');
 
-            // Provide visual feedback
+            // Show feedback
             tooltip.textContent = 'Copied!';
             usernameText.textContent = 'Copied to Clipboard!';
 
-            // Reset tooltip and text after 2.5 seconds
+            // Reset after 2.5 seconds
             setTimeout(() => {
                 tooltip.textContent = 'Click to Copy';
-                usernameText.textContent = discordUsername;
+                usernameText.textContent = username;
             }, 2500);
         }
+
+        /* 
+        HOW TO USE THIS TEMPLATE:
+        
+        1. REPLACE PLACEHOLDER CONTENT:
+           - Change "Your Name" in title and meta tags
+           - Update the logo (currently "YN" - use your initials)
+           - Replace "your_username" with your actual username
+           - Update social media links in footer
+           
+        2. ADD YOUR PROJECTS:
+           - Replace project names, descriptions, and tech tags
+           - Add real project links (live sites and source code)
+           
+        3. ADD PROJECT IMAGES:
+           - Replace image placeholders with actual screenshots
+           - Recommended size: 600x400 pixels (16:9 aspect ratio)
+           - Use this format: <img src="/path/to/image.jpg" alt="Description">
+           
+        4. CUSTOMIZE COLORS:
+           - Edit CSS variables at the top of the <style> section
+           - Change --accent-color, --highlight-color, etc.
+           
+        5. ADD MORE PROJECTS:
+           - Copy any website card structure
+           - Each card needs: image, content, tags, and links
+        */
     </script>
 </body>
 </html>
