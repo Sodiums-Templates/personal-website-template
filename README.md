@@ -1,1 +1,11 @@
-This is my personal website. Feel free to do what you would like with it. All the CSS is inside the HTML files, and it uses some tailwind and fontawesome icons. If you use this as a template, please do not use any of my photos, and make sure to change all the text. You don't have to change the titles, headings, subheadings or footers. You MUST give credit to me if you use this website for personal or commercial use.
+# Personal Website Template
+
+All css and javascript is self contained. Please remember to give credit to me.
+
+## How to download?
+
+Go to the latest release in the middle of the sidebar to the right, and download the .zip file. Then extract it to your desired location.
+
+## How do I edit it?
+
+You can directly fork this repository and then edit it in github and publish to github pages/cloudflare pages, or (this is recommended) download the latest release and edit it (Plz using linux) in webstorm. I personally prefer webstorm as an IDE, but you can use anything from Neovim to Notepad to edit this.
