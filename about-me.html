@@ -4,33 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Primary SEO Meta Tags -->
-  <title>Ivory Hnt | About me</title>
-  <meta name="title" content="Ivory Hnt | About Me">
-  <meta name="description" content="Learn more about Ivory Hnt, a web developer and Linux enthusiast. Discover my experience, skills, hobbies, and certifications.">
-  <meta name="author" content="Ivory Hnt">
+  <!-- Primary SEO Meta Tags - Replace with your info -->
+  <title>Your Name | About Me</title>
+  <meta name="title" content="Your Name | About Me">
+  <meta name="description" content="Learn more about Your Name, a web developer and designer. Discover my experience, skills, hobbies, and certifications.">
+  <meta name="author" content="Your Name">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ivoryhnt.dev/about-me">
-  <meta property="og:title" content="About Ivory Hnt | Portfolio">
-  <meta property="og:description" content="Welcome to my About Me page. You will now gain more knowledge about my amazingness.">
-  <meta property="og:image" content="https://ivoryhnt.dev/assets/og-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com/about-me">
+  <meta property="og:title" content="About Your Name | Portfolio">
+  <meta property="og:description" content="Welcome to my About Me page. Learn more about my background and experience.">
+  <meta property="og:image" content="https://yourwebsite.com/assets/og-image.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://ivoryhnt.dev/about-me">
-  <meta property="twitter:title" content="About Ivory Hnt | Portfolio">
-  <meta property="twitter:description" content="Welcome to my About Me page. You will now gain more knowledge about my amazingness.">
-  <meta property="twitter:image" content="https://ivoryhnt.dev/assets/twitter-image.jpg">
+  <meta property="twitter:url" content="https://yourwebsite.com/about-me">
+  <meta property="twitter:title" content="About Your Name | Portfolio">
+  <meta property="twitter:description" content="Welcome to my About Me page. Learn more about my background and experience.">
+  <meta property="twitter:image" content="https://yourwebsite.com/assets/twitter-image.jpg">
 
   <!-- Additional Meta Tags -->
   <meta name="theme-color" content="#2a2834">
-  <link rel="canonical" href="https://ivoryhnt.dev/about-me">
+  <link rel="canonical" href="https://yourwebsite.com/about-me">
 
-  <!-- Favicon and Icons -->
+  <!-- Favicon and Icons - Replace with your own -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -49,7 +49,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
-    /* --- CSS Variables & General Reset (from your original file) --- */
+    /* --- CSS Variables - Customize colors here --- */
     :root {
       --primary-bg: #1a1a1a;
       --secondary-bg: #0f0f0f;
@@ -134,6 +134,7 @@
       height: 80px;
     }
 
+    /* Logo - Replace with your initials or logo */
     .logo {
       font-size: 1.8rem;
       font-weight: 700;
@@ -221,6 +222,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
+    
     .photo-item img {
       width: 100%;
       height: 400px;
@@ -228,10 +230,32 @@
       border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    
     .photo-item img:hover {
       transform: scale(1.03);
       box-shadow: 0 15px 30px var(--shadow-color);
     }
+    
+    /* Placeholder for photo gallery */
+    .photo-placeholder {
+      width: 100%;
+      height: 400px;
+      background: linear-gradient(45deg, var(--primary-bg), var(--secondary-bg));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .photo-placeholder:hover {
+      transform: scale(1.03);
+      box-shadow: 0 15px 30px var(--shadow-color);
+    }
+    
     .gallery-button-container {
       text-align: center;
       margin-top: 4rem;
@@ -341,7 +365,6 @@
       color: var(--highlight-color);
     }
 
-
     /* --- Hobbies Section --- */
     .hobbies-grid {
       display: grid;
@@ -423,7 +446,7 @@
       font-size: 0.9rem;
       white-space: nowrap;
     }
-    #discord-copy-link:hover .tooltip {
+    #username-copy-link:hover .tooltip {
       visibility: visible;
       opacity: 1;
     }
@@ -460,7 +483,8 @@
 <!-- Header & Navigation -->
 <header>
   <nav>
-    <a href="/" class="logo" aria-label="Ivory Hnt Home">.</a>
+    <!-- Replace with your initials or logo -->
+    <a href="/" class="logo" aria-label="Your Name Home">YN</a>
     <a href="/" class="back-link" aria-label="Back to Portfolio">
       <i class="fas fa-arrow-left"></i>
       <span>Back to Portfolio</span>
@@ -472,7 +496,7 @@
   <!-- About Hero Section -->
   <section id="about-hero">
     <h1 data-aos="fade-down">About Me</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Here's more information about me. You can see my current projects on the main page!</p>
+    <p data-aos="fade-up" data-aos-delay="200">Here's more info about me. You can see my current projects on the main page!</p>
   </section>
 
   <!-- Photo Gallery Section -->
@@ -481,21 +505,28 @@
       <h2>Photo Gallery</h2>
     </div>
     <div class="photo-gallery-grid">
+      <!-- Replace with your actual photos -->
       <div class="photo-item" data-aos="fade-up">
-        <img src="https://sodium-website.pages.dev/photos/photo002.png" alt="Image 1" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+        <div class="photo-placeholder">Photo 1<br>250 × 400</div>
+        <!-- Uncomment and add your image:
+        <img src="/path/to/photo1.jpg" alt="Photo 1"> -->
       </div>
       <div class="photo-item" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://sodium-website.pages.dev/photos/photo006.png" alt="Image 2" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+        <div class="photo-placeholder">Photo 2<br>250 × 400</div>
+        <!-- Add your second photo here -->
       </div>
       <div class="photo-item" data-aos="fade-up" data-aos-delay="200">
-        <img src="https://sodium-website.pages.dev/photos/photo005.png" alt="Image 3" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+        <div class="photo-placeholder">Photo 3<br>250 × 400</div>
+        <!-- Add your third photo here -->
       </div>
       <div class="photo-item" data-aos="fade-up" data-aos-delay="300">
-        <img src="https://sodium-website.pages.dev/photos/photo004.png" alt="Image 4" onerror="this.onerror=null;this.src='https://placehold.co/600x400';">
+        <div class="photo-placeholder">Photo 4<br>250 × 400</div>
+        <!-- Add your fourth photo here -->
       </div>
     </div>
     <div class="gallery-button-container" data-aos="fade-up">
-      <a href="/photography" class="cta-button">View My Photography</a>
+      <!-- Replace with your gallery page link -->
+      <a href="/gallery" class="cta-button">View My Gallery</a>
     </div>
   </section>
 
@@ -505,25 +536,26 @@
       <h2>My Experience</h2>
     </div>
     <div class="experience-timeline">
+      <!-- Replace with your actual experience -->
       <div class="timeline-item" data-aos="fade-up">
         <div class="timeline-content">
-          <span class="timeline-date">2024 - Present</span>
-          <h3>Photographer</h3>
-          <p>Taking photos as a volunteer for small events and charity events.</p>
+          <span class="timeline-date">2023 - Present</span>
+          <h3>Senior Developer</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
         </div>
       </div>
       <div class="timeline-item" data-aos="fade-up">
         <div class="timeline-content">
-          <span class="timeline-date">2024-2025</span>
-          <h3>Event Organizer</h3>
-          <p>Co-founded and organized Rivera Connect, a Linux and CS event & The Cat Games, a large scale Minecraft event.</p>
+          <span class="timeline-date">2022 - 2023</span>
+          <h3>Frontend Developer</h3>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
         </div>
       </div>
       <div class="timeline-item" data-aos="fade-up">
         <div class="timeline-content">
           <span class="timeline-date">2020 - 2022</span>
-          <h3>Anoying Human</h3>
-          <p>Gained a Phd in anoyingness. The knowledge I gained from this still resonates with me today.</p>
+          <h3>Junior Developer</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
     </div>
@@ -535,22 +567,23 @@
       <h2>Certificates</h2>
     </div>
     <div class="certificates-grid">
-      <a href="/certificates/Political_Compass_Certificate_296.pdf" class="certificate-card" data-aos="fade-up" aria-label="View Political Compass Certificate" target="_blank" rel="noopener noreferrer">
+      <!-- Replace with your actual certificates -->
+      <a href="#" class="certificate-card" data-aos="fade-up" aria-label="View Certificate One" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-award"></i>
-        <h3>Political Compass</h3>
-        <p>Issued by: Political Compass</p>
+        <h3>Web Development Certification</h3>
+        <p>Issued by: Tech Institute</p>
         <p class="view-certificate-link">View Certificate &rarr;</p>
       </a>
-      <a href="#" class="certificate-card" data-aos="fade-up" data-aos-delay="100" aria-label="View Web Development Bootcamp Certificate" target="_blank" rel="noopener noreferrer">
+      <a href="#" class="certificate-card" data-aos="fade-up" data-aos-delay="100" aria-label="View Certificate Two" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-award"></i>
-        <h3>Web Development Bootcamp</h3>
-        <p>Issued by: Code Institute</p>
+        <h3>JavaScript Mastery</h3>
+        <p>Issued by: Code Academy</p>
         <p class="view-certificate-link">View Certificate &rarr;</p>
       </a>
-      <a href="#" class="certificate-card" data-aos="fade-up" data-aos-delay="200" aria-label="View UI/UX Design Principles Certificate" target="_blank" rel="noopener noreferrer">
+      <a href="#" class="certificate-card" data-aos="fade-up" data-aos-delay="200" aria-label="View Certificate Three" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-award"></i>
         <h3>UI/UX Design Principles</h3>
-        <p>Issued by: DesignLab</p>
+        <p>Issued by: Design School</p>
         <p class="view-certificate-link">View Certificate &rarr;</p>
       </a>
     </div>
@@ -562,25 +595,26 @@
       <h2>Hobbies & Interests</h2>
     </div>
     <div class="hobbies-grid">
+      <!-- Customize with your actual hobbies -->
       <div class="hobby-item" data-aos="zoom-in">
-        <i class="fas fa-gamepad"></i>
-        <h3>Gaming</h3>
-        <p>I very much enjoy playing Minecraft and Satisfactory.</p>
+        <i class="fas fa-code"></i>
+        <h3>Coding</h3>
+        <p>I enjoy building apps and websites in my free time.</p>
       </div>
       <div class="hobby-item" data-aos="zoom-in" data-aos-delay="100">
         <i class="fas fa-camera-retro"></i>
         <h3>Photography</h3>
-        <p>Capturing moments for others, and capturing scenes for myself.</p>
+        <p>Capturing moments and beautiful scenes around the world.</p>
       </div>
       <div class="hobby-item" data-aos="zoom-in" data-aos-delay="200">
-        <i class="fa-solid fa-code"></i>
-        <h3>Web Development</h3>
-        <p>I love to design and develop websites for myself, and others.</p>
+        <i class="fas fa-gamepad"></i>
+        <h3>Gaming</h3>
+        <p>I love playing strategy games and exploring virtual worlds.</p>
       </div>
       <div class="hobby-item" data-aos="zoom-in" data-aos-delay="300">
-        <i class="fa-solid fa-computer"></i>
-        <h3>Linux</h3>
-        <p>I am addicted to absolutely anything Linux related.</p>
+        <i class="fas fa-book"></i>
+        <h3>Reading</h3>
+        <p>Always learning something new through books and articles.</p>
       </div>
     </div>
   </section>
@@ -592,18 +626,20 @@
   <div class="footer-content">
     <h2 data-aos="fade-up">Let's Connect</h2>
     <p data-aos="fade-up" data-aos-delay="100">
-      Find me on my favorite platforms, or copy my Discord tag to get in touch.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Find me on social media or send me a message.
     </p>
     <div class="social-links" data-aos="fade-up" data-aos-delay="200">
-      <a href="https://discord.gg/bwY5cWafJZ" target="_blank" rel="noopener noreferrer" aria-label="Join Sodium's Discord Server"><i class="fab fa-discord"></i><span>Server</span></a>
-      <a href="https://www.reddit.com/user/Icy-Rooster4152/" target="_blank" rel="noopener noreferrer" aria-label="Follow Sodium on Reddit"><i class="fab fa-reddit"></i><span>Reddit</span></a>
-      <a href="#" onclick="copyDiscord(event)" aria-label="Copy Sodium's Discord Username" id="discord-copy-link">
+      <!-- Replace with your social media links -->
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub"><i class="fab fa-github"></i><span>GitHub</span></a>
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+      <a href="#" onclick="copyUsername(event)" aria-label="Copy Username" id="username-copy-link">
         <i class="fa-solid fa-at"></i>
-        <span id="discord-username-text">sodiumicecream</span>
-        <span class="tooltip" id="discord-tooltip">Click to Copy</span>
+        <span id="username-text">your_username</span>
+        <span class="tooltip" id="copy-tooltip">Click to Copy</span>
       </a>
     </div>
-    <p class="copyright">&copy; 2025 Ivory Hnt. GNU Public Licence | <a href="https://github.com/Ivory-Hnt/sodium-website">View on Github</a></p>
+    <!-- Update copyright with your info -->
+    <p class="copyright">&copy; 2025 Your Name. All rights reserved | <a href="#">View on Github</a></p>
   </div>
 </footer>
 
@@ -617,31 +653,77 @@
     offset: 50,
   });
 
-  // Discord username copy function
-  function copyDiscord(event) {
+  // Username copy function
+  function copyUsername(event) {
     event.preventDefault();
-    const username = document.getElementById('discord-username-text').innerText;
-    const tooltip = document.getElementById('discord-tooltip');
+    
+    // Replace with your actual username
+    const username = "your_username";
+    const tooltip = document.getElementById('copy-tooltip');
+    const usernameText = document.getElementById('username-text');
 
     // Create a temporary textarea to copy the text
     const textArea = document.createElement('textarea');
     textArea.value = username;
     document.body.appendChild(textArea);
     textArea.select();
+    
     try {
       document.execCommand('copy');
-      tooltip.innerText = 'Copied!';
+      tooltip.textContent = 'Copied!';
+      usernameText.textContent = 'Copied to Clipboard!';
     } catch (err) {
       console.error('Failed to copy text: ', err);
-      tooltip.innerText = 'Failed to copy';
+      tooltip.textContent = 'Failed to copy';
     }
+    
     document.body.removeChild(textArea);
 
     // Reset tooltip text after a delay
     setTimeout(() => {
-      tooltip.innerText = 'Click to Copy';
-    }, 2000);
+      tooltip.textContent = 'Click to Copy';
+      usernameText.textContent = username;
+    }, 2500);
   }
+
+  /* 
+  HOW TO USE THIS ABOUT ME TEMPLATE:
+  
+  1. REPLACE PLACEHOLDER CONTENT:
+     - Change "Your Name" throughout the document
+     - Update the logo (currently "YN" - use your initials)
+     - Replace "your_username" with your actual username
+     - Update all meta tags with your domain and info
+     
+  2. ADD YOUR PHOTOS:
+     - Replace photo placeholders with actual images
+     - Recommended size: 250×400px for portrait orientation
+     - Use format: <img src="/path/to/photo.jpg" alt="Description">
+     
+  3. UPDATE EXPERIENCE TIMELINE:
+     - Replace job titles, companies, and dates
+     - Add or remove timeline items as needed
+     - Keep descriptions brief but meaningful
+     
+  4. ADD YOUR CERTIFICATES:
+     - Replace with your actual certifications
+     - Update certificate names and issuing organizations
+     - Add real links to certificate PDFs or verification pages
+     
+  5. CUSTOMIZE HOBBIES:
+     - Replace with your actual interests
+     - Change icons to match your hobbies (Font Awesome icons)
+     - Update descriptions to reflect your personality
+     
+  6. UPDATE SOCIAL LINKS:
+     - Add your real social media profiles
+     - Update the footer contact info
+     - Change copyright information
+     
+  7. ADD MORE SECTIONS:
+     - Copy the section structure to add skills, awards, etc.
+     - Each section should have data-aos attributes for animations
+  */
 </script>
 </body>
 </html>
