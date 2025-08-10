@@ -1,1 +1,2 @@
-# DO NOT USE ANY OF THESE FOR YOUR WEBSITE IF YOU INTEND TO COPY THIS ONE AND USE IT AS A TEMPLATE!!!
+# Certificates
+You can put certificates you have in this directory!
